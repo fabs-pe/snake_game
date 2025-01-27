@@ -64,7 +64,7 @@ def drawGrid():
     for x in range(0, SW, BLOCK_SIZE):
         for y in range(0, SH, BLOCK_SIZE):
             rect= pygame.Rect(x,y, BLOCK_SIZE, BLOCK_SIZE)
-            pygame.draw.rect(screen, "#3C3C3B", rect, 1)
+            pygame.draw.rect(screen, "black", rect, 1)
 
 score= FONT.render("1", True, "white")
 score_rect = score.get_rect(center=(SW/2, SH/20))
@@ -103,10 +103,10 @@ while True:
 
     score = FONT.render(f"{len(snake.body)+1}", True, "white")
 
-    pygame.draw.rect(screen, "green", snake.head)
+    pygame.draw.rect(screen, "blue", snake.head)
 
     for square in snake.body:
-        pygame.draw.rect(screen, "green", square)
+        pygame.draw.rect(screen, "blue", square)
 
     screen.blit(score, score_rect)
 
